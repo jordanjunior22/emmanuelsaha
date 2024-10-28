@@ -21,7 +21,7 @@ const Home = () => {
 
   const trackWhatsAppClick = () => {
     if (typeof window !== 'undefined') {
-      window.fbq('track', 'Lead'); // You can customize the event name as needed
+      window.fbq('track', 'Whatsapp Lead'); // You can customize the event name as needed
     }
   };
   const books = [
