@@ -1,14 +1,29 @@
 'use client'
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import Image from 'next/image';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Home = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
-  
+  useEffect(() => {
+    // Initialize Facebook Pixel
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1230240051439246'); // Replace with your Pixel ID
+    fbq('track', 'PageView');
+  }, []);
 
-  
+  const trackWhatsAppClick = () => {
+    if (typeof window !== 'undefined') {
+      window.fbq('track', 'Lead'); // You can customize the event name as needed
+    }
+  };
   const books = [
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE`,
@@ -87,6 +102,7 @@ const Home = () => {
                   <a
                     href={book.whatsappLink}
                     target="_blank"
+                    onClick={trackWhatsAppClick}
                     rel="noopener noreferrer"
                     className="mt-2 inline-flex items-center bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition"
                   >
