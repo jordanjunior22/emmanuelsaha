@@ -1,101 +1,141 @@
-import Image from "next/image";
+'use client'
+import { useState } from 'react';
+import Image from 'next/image';
+import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-export default function Home() {
+const Home = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedBook, setSelectedBook] = useState(null);
+  
+
+  
+  const books = [
+    {
+      title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE`,
+      image: "/book3.jpg",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Trois",
+      summary: `Motivé par une longue carrière de plus de trois décennies dans l’environnement des Pensions de retraite et des Rentes viagères au sein du Ministère de l’Economie et Finances et du Ministère en charge des Finances, il s’est imposé à notre esprit de laisser le fruit de notre expérience aux jeunes générations à travers un ouvrage intitulé :«Guide Pratique des Pensions de Retraite dans l’Administration camerounaise » paru en 2002.
+      Cette édition revue et actualisée l’arrime aux nouvelles directives.
+      Elle fait revivre dans sa première partie quelques moments phares du Ministère en charge des Finances.
+      - La seconde partie traite de l’ignorance des textes comme source des déboires de l’Agent public et de ses ayants droit. 
+      - La troisième partie se concentre sur la constitution des droits à pension.
+      - La quatrième partie fait revivre à des fins de recherche ou historiques certaines prestations disparues ou en voie de disparition.
+      En annexe, sont publiés entre autres les fiches de référence relatives à la vérification des dossiers soumis au visa de la hiérarchie, quelques textes réglementaires, et la procédure en matière de pension de retraite.`,
+    },
+    {
+      title: "REGULARISATION SALARIALE ET REFLEXE D'ACHIVISTE",
+      image: "/book1.jpg",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Un",
+      summary: `Permettez-moi de vous présenter cette publication de 274 pages, "Régularisation salariale et Réflexe d'Archiviste", parue en octobre 2008. Cette œuvre éclaire de nombreux sujets, notamment les Certificats Administratifs et les États des Sommes Dues, qui sont des techniques utilisées par l'Administration des Finances. Ces méthodes servent soit à recouvrer les fonds dus par les usagers, soit à clarifier leur situation financière en fournissant des éléments de réponse.
+      L'ouvrage prodigue également des conseils essentiels concernant le Réflexe d'Archiviste, qui nous permet de nous prémunir contre des événements malheureux tels que les accidents, les incendies ou les catastrophes. En ces circonstances où nous disposons de très peu de temps pour prendre des affaires avant de quitter les lieux, le Réflexe d'Archiviste nous aide à identifier et rassembler l'essentiel de nos documents importants.
+      En somme, cette œuvre offre une meilleure compréhension des aspects financiers et administratifs liés à la régularisation salariale, tout en soulignant l'importance du Réflexe d'Archiviste pour protéger nos documents essentiels lors de circonstances critiques.`,
+    },
+    {
+      title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE`,
+      image: "/book2.jpg",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Deux",
+      summary: `La première  édition du Guide Pratique des Pensions de retraite dans l'Administration camerounaise reste actuelle: Les notions de pension d'auteurs de droit ou d'ayants droit  à savoir: la pension de retraite, la pension de réversion de veuves, la pension temporaire d'orphelins, les allocations familiales, le capital décès, la retraite par anticipation et les avantages y  afférents, bref, les informations pratiques et les modalités de calcul n'ont pas changé du fait de la non évolution notable  de la législation en la matière.L'édition revue et actualisée nous livre certains secrets dont l'avant goût est ressorti dans la note de l'auteur.`,
+      unique : `(Edition revue et actualisée)`
+    },
+
+  ];
+
+  const openModal = (book) => {
+    setSelectedBook(book);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedBook(null);
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-gradient-to-r from-black to-purple-500 min-h-screen p-5 text-white">
+      <div className="max-w-3xl mx-auto text-center">
+        <div className="mb-10">
+          <Image
+            src="/emma.jpg"
+            alt="Auteur"
+            width={150}
+            height={150}
+            className="rounded-full mx-auto border-4 border-white"
+          />
+          <h1 className="text-3xl font-bold mt-4">Emmanuel SAHA</h1>
+          <p className="text-gray-200 mt-2">
+            Ceci est une courte biographie de l'auteur. Ici, vous pouvez décrire son parcours, ses réalisations et ses intérêts.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div>
+          <h2 className="text-2xl font-semibold mb-1">Livres</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            {books.map((book, index) => (
+              <div key={index} className="bg-white border rounded-lg shadow-md overflow-hidden">
+                <Image
+                  src={book.image}
+                  alt={book.title}
+                  width={300}
+                  height={400}
+                  className="w-full h-auto object-contain"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-black text-xs">{book.title}</h3>
+                  <p className='text-black'>{book.unique}</p>
+                  <div className='flex flex-col md:flex-row'>
+
+                  </div>
+                  <a
+                    href={book.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition"
+                  >
+                    <FaWhatsapp className="mr-2" />
+                    Acheter
+                  </a>
+                </div>
+                <button
+                    onClick={() => openModal(book)}
+                    className="text-blue-500 hover:underline"
+                  >
+                    Résumé
+                  </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <footer className="mt-10">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-lg font-semibold mb-4">Suivez-moi</h2>
+          <div className="flex justify-center space-x-4">
+            <a href="https://www.facebook.com/profile.php?id=100094088863230" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100094088863230" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
+              <FaTwitter size={24} />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100094088863230" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
+              <FaInstagram size={24} />
+            </a>
+          </div>
+        </div>
       </footer>
+
+      {/* Modal personnalisé pour le résumé du livre */}
+      {modalIsOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="bg-white p-5 rounded shadow-md max-w-md w-full text-black">
+            <h2 className="text-xl font-bold mb-2">{selectedBook?.title}</h2>
+            <p>{selectedBook?.summary}</p>
+            <button onClick={closeModal} className="mt-4 text-red-500 hover:underline">
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default Home;
