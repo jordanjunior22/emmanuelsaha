@@ -78,7 +78,9 @@ const Home = () => {
           />
           <h1 className="text-3xl font-bold mt-4">Emmanuel SAHA</h1>
           <p className="text-gray-200 mt-2">
-            Ceci est une courte biographie de l'auteur. Ici, vous pouvez décrire son parcours, ses réalisations et ses intérêts.
+            Emmanuel SAHA est Inspecteur de la Documentation  Diplômé d’Etudes Supérieures en Sciences de l’Information et de la Communication de l’Université Cheikh Anta Diop de Dakar au Sénégal.
+Ancien fonctionnaire  du Ministère  camerounais en charge des finances de 1982 à 2015, il exerce actuellement comme Expert Indépendant en matière de pension de retraite.
+
           </p>
         </div>
         <div>
