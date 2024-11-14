@@ -28,7 +28,7 @@ const Home = () => {
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE`,
       image: "/book3.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Trois",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE",
       summary: `Motivé par une longue carrière de plus de trois décennies dans l’environnement des Pensions de retraite et des Rentes viagères au sein du Ministère de l’Economie et Finances et du Ministère en charge des Finances, il s’est imposé à notre esprit de laisser le fruit de notre expérience aux jeunes générations à travers un ouvrage intitulé :«Guide Pratique des Pensions de Retraite dans l’Administration camerounaise » paru en 2002.
       Cette édition revue et actualisée l’arrime aux nouvelles directives.
       Elle fait revivre dans sa première partie quelques moments phares du Ministère en charge des Finances.
@@ -40,7 +40,7 @@ const Home = () => {
     {
       title: "REGULARISATION SALARIALE ET REFLEXE D'ACHIVISTE",
       image: "/book1.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Un",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre REGULARISATION SALARIALE ET REFLEXE D'ACHIVISTE",
       summary: `Permettez-moi de vous présenter cette publication de 274 pages, "Régularisation salariale et Réflexe d'Archiviste", parue en octobre 2008. Cette œuvre éclaire de nombreux sujets, notamment les Certificats Administratifs et les États des Sommes Dues, qui sont des techniques utilisées par l'Administration des Finances. Ces méthodes servent soit à recouvrer les fonds dus par les usagers, soit à clarifier leur situation financière en fournissant des éléments de réponse.
       L'ouvrage prodigue également des conseils essentiels concernant le Réflexe d'Archiviste, qui nous permet de nous prémunir contre des événements malheureux tels que les accidents, les incendies ou les catastrophes. En ces circonstances où nous disposons de très peu de temps pour prendre des affaires avant de quitter les lieux, le Réflexe d'Archiviste nous aide à identifier et rassembler l'essentiel de nos documents importants.
       En somme, cette œuvre offre une meilleure compréhension des aspects financiers et administratifs liés à la régularisation salariale, tout en soulignant l'importance du Réflexe d'Archiviste pour protéger nos documents essentiels lors de circonstances critiques.`,
@@ -48,7 +48,7 @@ const Home = () => {
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE`,
       image: "/book2.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Deux",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE Edition revue et actualisée",
       summary: `La première  édition du Guide Pratique des Pensions de retraite dans l'Administration camerounaise reste actuelle: Les notions de pension d'auteurs de droit ou d'ayants droit  à savoir: la pension de retraite, la pension de réversion de veuves, la pension temporaire d'orphelins, les allocations familiales, le capital décès, la retraite par anticipation et les avantages y  afférents, bref, les informations pratiques et les modalités de calcul n'ont pas changé du fait de la non évolution notable  de la législation en la matière.L'édition revue et actualisée nous livre certains secrets dont l'avant goût est ressorti dans la note de l'auteur.`,
       unique : `(Edition revue et actualisée)`
     },
