@@ -28,7 +28,7 @@ const Home = () => {
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE`,
       image: "/book3.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROUNAISE",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Trois",
       summary: `Motivé par une longue carrière de plus de trois décennies dans l’environnement des Pensions de retraite et des Rentes viagères au sein du Ministère de l’Economie et Finances et du Ministère en charge des Finances, il s’est imposé à notre esprit de laisser le fruit de notre expérience aux jeunes générations à travers un ouvrage intitulé :«Guide Pratique des Pensions de Retraite dans l’Administration camerounaise » paru en 2002.
       Cette édition revue et actualisée l’arrime aux nouvelles directives.
       Elle fait revivre dans sa première partie quelques moments phares du Ministère en charge des Finances.
@@ -36,21 +36,24 @@ const Home = () => {
       - La troisième partie se concentre sur la constitution des droits à pension.
       - La quatrième partie fait revivre à des fins de recherche ou historiques certaines prestations disparues ou en voie de disparition.
       En annexe, sont publiés entre autres les fiches de référence relatives à la vérification des dossiers soumis au visa de la hiérarchie, quelques textes réglementaires, et la procédure en matière de pension de retraite.`,
+      price: '10,000 XAF', 
     },
     {
       title: "REGULARISATION SALARIALE ET REFLEXE D'ACHIVISTE",
       image: "/book1.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre REGULARISATION SALARIALE ET REFLEXE D'ACHIVISTE",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Un",
       summary: `Permettez-moi de vous présenter cette publication de 274 pages, "Régularisation salariale et Réflexe d'Archiviste", parue en octobre 2008. Cette œuvre éclaire de nombreux sujets, notamment les Certificats Administratifs et les États des Sommes Dues, qui sont des techniques utilisées par l'Administration des Finances. Ces méthodes servent soit à recouvrer les fonds dus par les usagers, soit à clarifier leur situation financière en fournissant des éléments de réponse.
       L'ouvrage prodigue également des conseils essentiels concernant le Réflexe d'Archiviste, qui nous permet de nous prémunir contre des événements malheureux tels que les accidents, les incendies ou les catastrophes. En ces circonstances où nous disposons de très peu de temps pour prendre des affaires avant de quitter les lieux, le Réflexe d'Archiviste nous aide à identifier et rassembler l'essentiel de nos documents importants.
       En somme, cette œuvre offre une meilleure compréhension des aspects financiers et administratifs liés à la régularisation salariale, tout en soulignant l'importance du Réflexe d'Archiviste pour protéger nos documents essentiels lors de circonstances critiques.`,
+      price: '10,000 XAF', 
     },
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE`,
       image: "/book2.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE Edition revue et actualisée",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le Livre Deux",
       summary: `La première  édition du Guide Pratique des Pensions de retraite dans l'Administration camerounaise reste actuelle: Les notions de pension d'auteurs de droit ou d'ayants droit  à savoir: la pension de retraite, la pension de réversion de veuves, la pension temporaire d'orphelins, les allocations familiales, le capital décès, la retraite par anticipation et les avantages y  afférents, bref, les informations pratiques et les modalités de calcul n'ont pas changé du fait de la non évolution notable  de la législation en la matière.L'édition revue et actualisée nous livre certains secrets dont l'avant goût est ressorti dans la note de l'auteur.`,
-      unique : `(Edition revue et actualisée)`
+      unique : `(Edition revue et actualisée)`,
+      price: '12,500 XAF', 
     },
 
   ];
@@ -78,9 +81,7 @@ const Home = () => {
           />
           <h1 className="text-3xl font-bold mt-4">Emmanuel SAHA</h1>
           <p className="text-gray-200 mt-2">
-            Emmanuel SAHA est Inspecteur de la Documentation  Diplômé d’Etudes Supérieures en Sciences de l’Information et de la Communication de l’Université Cheikh Anta Diop de Dakar au Sénégal.
-Ancien fonctionnaire  du Ministère  camerounais en charge des finances de 1982 à 2015, il exerce actuellement comme Expert Indépendant en matière de pension de retraite.
-
+            Ceci est une courte biographie de l'auteur. Ici, vous pouvez décrire son parcours, ses réalisations et ses intérêts.
           </p>
         </div>
         <div>
@@ -98,6 +99,7 @@ Ancien fonctionnaire  du Ministère  camerounais en charge des finances de 1982 
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-black text-xs">{book.title}</h3>
                   <p className='text-black'>{book.unique}</p>
+                  <p className="text-green-500 font-bold">{book.price}</p> 
                   <div className='flex flex-col md:flex-row'>
 
                   </div>
