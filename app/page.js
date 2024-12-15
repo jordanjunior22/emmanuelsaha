@@ -50,7 +50,7 @@ const Home = () => {
     {
       title: `GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE`,
       image: "/book2.jpg",
-      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE",
+      whatsappLink: "https://wa.me/+237665914045?text=Je suis intéressé par le livre GUIDE PRATIQUE DES PENSIONS DE RETRAITE DANS L'ADMINISTRATION CAMEROOUNAISE (Edition revue et actualisée)",
       summary: `La première  édition du Guide Pratique des Pensions de retraite dans l'Administration camerounaise reste actuelle: Les notions de pension d'auteurs de droit ou d'ayants droit  à savoir: la pension de retraite, la pension de réversion de veuves, la pension temporaire d'orphelins, les allocations familiales, le capital décès, la retraite par anticipation et les avantages y  afférents, bref, les informations pratiques et les modalités de calcul n'ont pas changé du fait de la non évolution notable  de la législation en la matière.L'édition revue et actualisée nous livre certains secrets dont l'avant goût est ressorti dans la note de l'auteur.`,
       unique : `(Edition revue et actualisée)`,
       price: '12,500 XAF', 
@@ -147,7 +147,9 @@ const Home = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
           <div className="bg-white p-5 rounded shadow-md max-w-md w-full text-black">
             <h2 className="text-xl font-bold mb-2">{selectedBook?.title}</h2>
-            <p>{selectedBook?.summary}</p>
+            <div className="max-h-60 overflow-y-auto"> {/* Add a max height and overflow-y-auto */}
+              <p>{selectedBook?.summary}</p>
+            </div>
             <button onClick={closeModal} className="mt-4 text-red-500 hover:underline">
               Fermer
             </button>
